@@ -1,16 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* COLORS */
+/*
+Black Russian: #131316
+Summer Sky: #2eb0e5
+Scarlet: #f21911
+Magnolia: #fef9ff
+*/
+
 :root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #d64045;
+  --body-background: #131316;
+  --body-color: #333333;
+  --heading-color: #f21911;
+  --title-color: #fef9ff;
+  --action-color: #FEF9FF;
+}
+
+header {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* .intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8px;
+} */
+
+.intro-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 550px) {
+  .headshot {
+    margin-right: 2rem;
+  }
+}
+
+.photo-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headshot {
+  text-align: center;
+}
+
+.headshot img {
+  max-width: 180px;
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 22px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 18px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav li a:hover {
+  border-bottom: 2px solid #f21911;
+  color: #f21911;
 }
 
 body {
   background: var(--body-background);
   color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   margin: 0 8px;
   font-size: 108%;
   line-height: 1.5;
@@ -22,13 +107,26 @@ a {
   text-decoration-color: #ffb088;
 }
 
-h1 {
-  margin: 1rem 0 3rem;
+h1.name {
+  margin: 1rem 0 0 0;
   text-align: center;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--heading-color);
   line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
+  text-shadow: 4px 5px 4px #000000;
+}
+
+h2.title {
+  color: var(--title-color);
+  text-align: center;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.name-title hr {
+  margin: 12px 0;
 }
 
 body > header {
@@ -75,10 +173,4 @@ footer {
   text-align: center;
   margin-bottom: 4rem;
   font-size: 1em;
-}
-
-hr {
-  border: none;
-  border-top: 2px dotted #bbb;
-  margin: 3rem 0;
 }

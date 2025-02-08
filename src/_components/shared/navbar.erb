@@ -1,11 +1,19 @@
 <header>
-  <img src="<%= relative_url '/images/logo.svg' %>" alt="Logo" />
+  <div class="intro-container">
+    <div class="headshot">
+      <img src="<%= relative_url '/images/adrian.png' %>" alt="Adrian Grimm's headshot photo" />
+    </div>
+    <div class="name-title">
+      <h1 class="name">Adrian Grimm</h1>
+      <hr>
+      <h2 class="title">Ruby on Rails Developer</h2>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li class="nav-link"><a href="<%= relative_url '/' %>">Home</a></li>
+      <li class="nav-link"><a href="<%= relative_url '/about' %>">About</a></li>
+      <li class="nav-link"><a href="<%= relative_url '/posts' %>">Posts</a></li>
+    </ul>
+  </nav>
 </header>
-
-<nav>
-  <ul>
-    <li><a href="<%= relative_url '/' %>">Home</a></li>
-    <li><a href="<%= relative_url '/about' %>">About</a></li>
-    <li><a href="<%= relative_url '/posts' %>">Posts</a></li>
-  </ul>
-</nav>
