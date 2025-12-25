@@ -16,6 +16,7 @@ GEM
     addressable (2.8.8)
       public_suffix (>= 2.0.2, < 8.0)
     amazing_print (1.8.1)
+    ansi (1.5.0)
     base64 (0.3.0)
     benchmark (0.5.0)
     bigdecimal (4.0.1)
@@ -59,6 +60,9 @@ GEM
       zeitwerk (~> 2.5)
     bridgetown-paginate (2.0.5)
       bridgetown-core (= 2.0.5)
+    bridgetown-seo-tag (7.0.1)
+      bridgetown (>= 1.3)
+    builder (3.3.0)
     concurrent-ruby (1.3.6)
     connection_pool (3.0.2)
     csv (3.3.5)
@@ -107,9 +111,18 @@ GEM
     logger (1.7.0)
     minitest (6.0.0)
       prism (~> 1.5)
+    minitest-reporters (1.7.1)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     net-http (0.9.1)
       uri (>= 0.11.1)
     nio4r (2.7.5)
+    nokolexbor (0.6.2)
+    nokolexbor (0.6.2-arm64-darwin)
+    nokolexbor (0.6.2-x86_64-darwin)
+    nokolexbor (0.6.2-x86_64-linux)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -121,6 +134,8 @@ GEM
     puma (7.1.0)
       nio4r (~> 2.0)
     rack (3.2.4)
+    rack-test (2.2.0)
+      rack (>= 1.3)
     rackup (2.3.1)
       rack (>= 3)
     rake (13.3.1)
@@ -137,6 +152,7 @@ GEM
     roda (3.99.0)
       rack
     rouge (4.6.1)
+    ruby-progressbar (1.13.0)
     securerandom (0.4.1)
     serbea (2.4.1)
       erubi (>= 1.13)
@@ -170,12 +186,18 @@ PLATFORMS
 
 DEPENDENCIES
   bridgetown (~> 2.0.5)
+  bridgetown-seo-tag (~> 7.0)
+  minitest
+  minitest-reporters
+  nokolexbor (~> 0.6)
   puma (< 8)
+  rack-test
 
 CHECKSUMS
   activesupport (7.2.3) sha256=5675c9770dac93e371412684249f9dc3c8cec104efd0624362a520ae685c7b10
   addressable (2.8.8) sha256=7c13b8f9536cf6364c03b9d417c19986019e28f7c00ac8132da4eb0fe393b057
   amazing_print (1.8.1) sha256=f53b4e1881f53f9663cb222840c7a027d0e61d46cc908366965739559c0d6d68
+  ansi (1.5.0) sha256=5408253274e33d9d27d4a98c46d2998266fd51cba58a7eb9d08f50e57ed23592
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
@@ -184,6 +206,8 @@ CHECKSUMS
   bridgetown-core (2.0.5) sha256=539fdc7897f2dcc2c5d7180c53813a345747be762a53315c27cd54ae3e2b5105
   bridgetown-foundation (2.0.5) sha256=224a90acc90661de57d0115267858da12ce1a3b8dd457444ce46f3131ea081c6
   bridgetown-paginate (2.0.5) sha256=35e5a7a9aff6627d802fd419bd3a548753e11a120b89a85b6cd4e6ed213ae953
+  bridgetown-seo-tag (7.0.1) sha256=bc876c646822c392ce14123d111bdc2a62f05f5a14fa86c3d42e269900b02e5b
+  builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
   concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
   connection_pool (3.0.2) sha256=33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a
   csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
@@ -218,8 +242,13 @@ CHECKSUMS
   listen (3.9.0) sha256=db9e4424e0e5834480385197c139cb6b0ae0ef28cc13310cfd1ca78377d59c67
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   minitest (6.0.0) sha256=4ca597fc1d735ea18d2b4b98c5fb1d5a6da4a6f35ddf32bd5fa3eded33a453be
+  minitest-reporters (1.7.1) sha256=5060413a0c95b8c32fe73e0606f3631c173a884d7900e50013e15094eb50562c
   net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
   nio4r (2.7.5) sha256=6c90168e48fb5f8e768419c93abb94ba2b892a1d0602cb06eef16d8b7df1dca1
+  nokolexbor (0.6.2) sha256=5f010bc33e3810961ecefd291d97ec02bd2fbc12653c583ba08e2afbaa00a62b
+  nokolexbor (0.6.2-arm64-darwin) sha256=5e801b2d1da8371a03f56ce22c3763f1c767da12dcfb5cec3624698829784dc8
+  nokolexbor (0.6.2-x86_64-darwin) sha256=60869e2b7a0f40fc8d3834d4c6274c527c721b1107941c76a75e42e1aada9a50
+  nokolexbor (0.6.2-x86_64-linux) sha256=8d0fbebf17a7a027c5c6adc3c68bb798ce84bdfb00e880c186c7b448f7fd8298
   pp (0.6.3) sha256=2951d514450b93ccfeb1df7d021cae0da16e0a7f95ee1e2273719669d0ab9df6
   prettyprint (0.2.0) sha256=2bc9e15581a94742064a3cc8b0fb9d45aae3d03a1baa6ef80922627a0766f193
   prism (1.7.0) sha256=10062f734bf7985c8424c44fac382ac04a58124ea3d220ec3ba9fe4f2da65103
@@ -227,6 +256,7 @@ CHECKSUMS
   public_suffix (7.0.0) sha256=f7090b5beb0e56f9f10d79eed4d5fbe551b3b425da65877e075dad47a6a1b095
   puma (7.1.0) sha256=e45c10cb124f224d448c98db653a75499794edbecadc440ad616cf50f2fd49dd
   rack (3.2.4) sha256=5d74b6f75082a643f43c1e76b419c40f0e5527fcfee1e669ac1e6b73c0ccb6f6
+  rack-test (2.2.0) sha256=005a36692c306ac0b4a9350355ee080fd09ddef1148a5f8b2ac636c720f5c463
   rackup (2.3.1) sha256=6c79c26753778e90983761d677a48937ee3192b3ffef6bc963c0950f94688868
   rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
   rb-fsevent (0.11.2) sha256=43900b972e7301d6570f64b850a5aa67833ee7d87b458ee92805d56b7318aefe
@@ -236,6 +266,7 @@ CHECKSUMS
   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
   roda (3.99.0) sha256=05d0f44bd3431bd429f8dd799d8eb5136f04abf469776ce722d6f8c94950d42f
   rouge (4.6.1) sha256=5075346d5797d6864be93f7adc75a16047a7dbfa572c63c502419ffa582c77de
+  ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
   serbea (2.4.1) sha256=ac18f2ca3e1aabc0a15663b94a75fccc21b21b5a37772533cde65fe7c3941db8
   signalize (1.3.1) sha256=1afd7b717cfd17193cea5404a9b694b1adf793f53213c1f9c540c3a2341fa7f8
