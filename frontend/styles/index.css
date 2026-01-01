@@ -1,3 +1,6 @@
+/* Use Bulma CSS */
+@use "~bulma/bulma";
+
 /* Import the base Web Awesome stylesheet: */
 @import "@awesome.me/webawesome/dist/styles/webawesome.css";
 
