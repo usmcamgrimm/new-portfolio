@@ -4,6 +4,10 @@
 /* Import the base Web Awesome stylesheet: */
 @import "@awesome.me/webawesome/dist/styles/webawesome.css";
 
+/* Import Google Fonts */
+@import "@fontsource/league-spartan";
+@import "@fontsource/shadows-into-light";
+
 :root {
   --body-background: #f2f2f2;
   --body-color: #444;
@@ -14,9 +18,7 @@
 body {
   background: var(--body-background);
   color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
+  font-family: "League Spartan", sans-serif;
   margin: 0 8px;
   font-size: 108%;
   line-height: 1.5;

@@ -6,6 +6,10 @@ import "@awesome.me/webawesome/dist/components/button/button.js"
 import "@awesome.me/webawesome/dist/components/icon/icon.js"
 import "@awesome.me/webawesome/dist/components/spinner/spinner.js"
 
+// Import Google fonts
+import "@fontsource/league-spartan";
+import "@fontsource/shadows-into-light";
+
 // Import all JavaScript & CSS files from src/_components
 import components from "$components/**/*.{js,jsx,js.rb,css}"
 

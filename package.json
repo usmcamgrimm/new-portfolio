@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "@awesome.me/webawesome": "^3.1.0",
+    "@fontsource/league-spartan": "^5.2.8",
+    "@fontsource/shadows-into-light": "^5.2.8",
     "bulma": "^1.0.4"
   }
 }
